@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {% load static %}
+
+  	<title>Link Testing</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="{% static '//fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap' %}" rel="stylesheet">
+
+	<link rel="stylesheet" href="{% static '//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+	
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Link Testing</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-12 col-lg-10">
+					<form method="POST" class="signin-form" action="{%url 'result'%}" >
+                        {% csrf_token %}
+			      		<div class="form-group mb-3">
+			      			<label class="label" for="url">Enter url</label>
+			      			<input type="text" id="url" name="url" class="form-control" placeholder="Ex: www.google.com" required>
+			      		</div>
+		                
+						
+						<div class="form-group mb-3">
+		                	<label class="label" for="xpath_title">Enter Xpath for title</label>
+		                  <input type="text" class="form-control"id="xpath_title" name="xpath_title" placeholder="xpath_title" >
+		                 </div>
+
+
+						 <div class="form-group mb-3">
+		                	<label class="label" for="xpath_des">Enter Xpath for Description</label>
+		                  <input type="text" class="form-control"id="xpath_des" name="xpath_des" placeholder="xpath_des" >
+		                 </div>
+
+
+						<div class="form-group mb-3">
+		                	<label class="label" for="xpath_dur">Enter Xpath for duration</label>
+		                  <input type="text" class="form-control"id="xpath_dur" name="xpath_dur" placeholder="xpath_dur" >
+		                 </div>
+
+ 
+						<div class="form-group mb-3">
+		                	<label class="label" for="xpath_intake">Enter Xpath for intake</label>
+		                  <input type="text" class="form-control"id="xpath_intake" name="xpath_intake" placeholder="xpath_intake" >
+		                 </div>
+		                
+
+						<div class="form-group mb-3">
+		                	<label class="label" for="xpath_tui_fee">Enter Xpath for Tuition Fee</label>
+		                  <input type="text" class="form-control"id="xpath_tui_fee" name="xpath_tui_fee" placeholder="xpath_tui_fee" >
+		                 </div> 
+
+						 <div class="form-group">
+		                	<button type="submit" value="Fetch" class="form-control btn btn-primary submit px-3">Check</button>
+		                </div>
+
+		            </form>
+		        </div>
+			</div>
+		</div>
+	</section>
+
+	<script src="static/js/jquery.min.js"></script>
+  <script src="static/js/popper.js"></script>
+  <script src="static/js/bootstrap.min.js"></script>
+  <script src="static/js/main.js"></script>
+
+</body>
+</html>
+
